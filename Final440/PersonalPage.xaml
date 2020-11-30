@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Final440"
+             x:Class="Final440.PersonalPage" >
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label Text="Unpaid Order:"
+               TextColor="Pink"
+               FontSize="20"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+            <ListView Margin="10, 0">
+                <ListView.ItemsSource>
+                    <x:Array Type="{x:Type local:Person}">
+                        <local:Person Name="Abigail" Birthday="01/15/1975" FavoriteColor="Aqua" />
+                        <local:Person Name="Bob" Birthday="02/20/1976" FavoriteColor="Black" />
+                        <local:Person Name="Cathy" Birthday="03/10/1977" FavoriteColor="Blue" />
+                        <local:Person Name="David" Birthday="04/25/1978" FavoriteColor="Fuchsia" />
+                        <local:Person Name="Eugenie" Birthday="05/05/1979" FavoriteColor="Gray" />
+                        <local:Person Name="Freddie" Birthday="06/30/1980" FavoriteColor="Green" />
+
+
+                    </x:Array>
+                </ListView.ItemsSource>
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="0, 5"
+                                     Orientation="Horizontal">
+                                <BoxView Color="{Binding FavoriteColor}" />
+                                <StackLayout VerticalOptions="Center"
+                                         Spacing="0">
+                                    <Label Text="{Binding Name}" />
+                                    <Label Text="{Binding Birthday, StringFormat='Born {0:d}'}" />
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+            <Label Text="Paid Order:"
+               TextColor="Pink"
+               FontSize="20"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+            <ListView Margin="10, 0">
+                <ListView.ItemsSource>
+                    <x:Array Type="{x:Type local:Person}">
+                        <local:Person Name="Abigail" Birthday="01/15/1975" FavoriteColor="Aqua" />
+                        <local:Person Name="Bob" Birthday="02/20/1976" FavoriteColor="Black" />
+                        <local:Person Name="Cathy" Birthday="03/10/1977" FavoriteColor="Blue" />
+                        <local:Person Name="David" Birthday="04/25/1978" FavoriteColor="Fuchsia" />
+                        <local:Person Name="Eugenie" Birthday="05/05/1979" FavoriteColor="Gray" />
+                        <local:Person Name="Freddie" Birthday="06/30/1980" FavoriteColor="Green" />
+
+
+                    </x:Array>
+                </ListView.ItemsSource>
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="0, 5"
+                                     Orientation="Horizontal">
+                                <BoxView Color="{Binding FavoriteColor}" />
+                                <StackLayout VerticalOptions="Center"
+                                         Spacing="0">
+                                    <Label Text="{Binding Name}" />
+                                    <Label Text="{Binding Birthday, StringFormat='Born {0:d}'}" />
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

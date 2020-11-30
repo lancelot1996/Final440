@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Final440.MainJobPage"   BackgroundImage="final440.png">
+    <Grid RowDefinitions="1.5*,*,*,*,0.75*,0.75*,0.75*"
+        ColumnDefinitions="*, *,0.75*,*,0.75*">
+        <BoxView Color="Transparent" />
+        <Label Text="Ticket"
+               FontSize="18"
+               FontAttributes="Bold"
+               TextTransform="Uppercase"
+               TextColor="Blue"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+
+        <ImageButton Source="airport.png"
+                    Grid.Row="1"
+                    Grid.ColumnSpan="2"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    BackgroundColor="Transparent"
+                Clicked="OnButtonAirportClicked" />
+        <ImageButton Source="train.png"
+                    Grid.Row="2"
+                    Grid.ColumnSpan="2"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    BackgroundColor="Transparent"
+                Clicked="OnButtonTrainClicked" />
+        <ImageButton Source="car.png"
+                    Grid.Row="3"
+                    Grid.ColumnSpan="2"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    BackgroundColor="Transparent"
+                Clicked="OnButtonCarClicked" />
+        <ImageButton Source="hotel.png"
+                    Grid.Row="5"
+                    Grid.ColumnSpan="3"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="Center"
+                    BackgroundColor="Transparent"
+                Clicked="OnButtonHotelClicked" />
+        <ImageButton Source="ski.png"
+                    Grid.Row="5"
+                    Grid.ColumnSpan="5"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="Center"
+                    BackgroundColor="Transparent"
+                Clicked="OnButtonScenicClicked" />
+    </Grid>
+</ContentPage>
