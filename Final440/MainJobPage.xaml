@@ -9,7 +9,7 @@
                FontSize="18"
                FontAttributes="Bold"
                TextTransform="Uppercase"
-               TextColor="Blue"
+               TextColor="Red"
                HorizontalOptions="Center"
                VerticalOptions="Center" />
 
